@@ -7,7 +7,7 @@ namespace JWTWebApiCore.Models
 {
     public class UserLogin
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string User { get; set; }
+        public string Pwd { get; set; }
     }
 }

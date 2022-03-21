@@ -54,7 +54,7 @@ namespace JWTWebApiCore.Controllers
             var token = new JwtSecurityToken(_config["Jwt:Issuer"],
               _config["Jwt:Audience"],
               claims,
-              expires: DateTime.Now.AddMinutes(15),
+              expires: DateTime.Now.AddHours(24),
               signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
@@ -62,7 +62,7 @@ namespace JWTWebApiCore.Controllers
 
         private UserModel Authenticate(UserLogin userLogin)
         {
-            var currentUser = UserConstants.Users.FirstOrDefault(o => o.Username.ToLower() == userLogin.Username.ToLower() && o.Password == userLogin.Password);
+            var currentUser = UserConstants.Users.FirstOrDefault(o => o.Username.ToLower() == userLogin.User.ToLower() && o.Password == userLogin.Pwd);
 
             if (currentUser != null)
             {

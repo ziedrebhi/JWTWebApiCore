@@ -24,7 +24,7 @@ namespace JWTWebApiCore.Controllers
         }
 
 
-        [HttpGet("User")]
+        [HttpGet("Users")]
         [Authorize(Roles = "User")]
         public IActionResult UsersEndpoint()
         {
