@@ -1,4 +1,4 @@
-# JWTWebApiCore
+# ASP.NET Core Web API Authentication and Authorization with JWT
 
 Example of ASP.NET Core Web API Authentication and Authorization with JWT (Json Web Token)
 JWT = Json Web Token
